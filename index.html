@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="toggle-sidebar">
+            <i class="las la-bars"></i>
+        </div>
+        <div class="logo">
+            <img src="assets/images/logo/mz_logo.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">
+                        <i class="las la-home" class="inner-link"></i>
+                        <span>Home</span>
+                    </a>
+                    <span>Home</span>
+                </li>
+                <!-- <li>
+                    <a href="#about_me">
+                        <i class="las la-address-card"></i>
+                        <span>About Me</span>
+                    </a>
+                    <span>About Me</span>
+                </li> -->
+                <li>
+                    <a href="#my_resume" class="inner-link">
+                        <i class="las la-file"></i>
+                        <span>My Resume</span>
+                    </a>
+                    <span>My Resume</span>
+                </li>
+                <li>
+                    <a href="#my_work" class="active inner-link">
+                        <i class="las la-briefcase"></i>
+                        <span>My Work</span>
+                    </a>
+                    <span>My Work</span>
+                </li>
+                <!-- <li>
+                    <a href="#testimonial">
+                        <i class="las la-comment-alt"></i>
+                        <span>Testimonial</span>
+                    </a>
+                    <span>Testimonial</span>
+                </li> -->
+                <li>
+                    <a href="#contact_me" class="inner-link">
+                        <i class="las la-phone"></i>
+                        <span>Contact Me</span>
+                    </a>
+                    <span>Contact Me</span>
+                </li>
+            </ul>
+        </nav>
+        <div class="toggle-mode">
+            <div class="outer" onclick="toggleMode()">
+                <div class="inner"></div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section id="home">
+            <div class="meteor-shower"></div>
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-lg-6 info">
+                       <img src="assets/images/headshot/circle_headimg.png" alt="img circle">
+                       <h1><span>I'm</span> Muzhou <span>(Cathy)</span></h1>
+                       <div class = "field">
+                            <h2></h2>
+                       </div>
+            
+                       <p>I don't define myself by a title—life shouldn't have limits. 
+                        I build games, develop software, create apps to solve real-world problems, and draw comics.
+                        </p>
+                        <a class="btn-custom-blue" href="#my_resume" onclick="setActive('my_resume')">My Resume</a>
+                        <a class="btn-custom-blue" href="#my_work" onclick="setActive('my_work')">My Works</a>
+                        <div class="socials">
+                            <ul>
+                                <li>
+                                    <a href="https://mzhai.myportfolio.com/" target="_blank">
+                                        <i class="lab la-behance"></i>
+                                        <span>Behance</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/mzhai-UofC?tab=repositories" target="_blank">
+                                        <i class="lab la-github"></i>
+                                        <span>GitHub</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/cathy-zhai-342973159/" target="_blank">
+                                        <i class="lab la-linkedin"></i>
+                                        <span>LinkedIn</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class = "col-lg-6 image">
+                        <img src="assets/images/headshot/img_mzhai.png" alt="person">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================================================================================================ -->
+        <!-- <section id="about_me">About</section> -->
+        <!-- ================================================================================================ -->
+        <section id="my_resume">
+            <div class="text-center">
+                <header class="has-bg">
+                    <img src="assets/images/bg/h1-bg.png" alt="h1 bg">
+                    <!-- <img src="assets/images/bg/h1-bg-light.png" alt="h1 bg"> -->
+                    <h1>My Resume</h1>
+                </header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 web-skills mt-5 mt-lg-0">
+                            <header class="custom">
+                                <h2>Key Skills</h2>
+                            </header>
+                            <div class="container">
+                                <div class="items row">
+                                    <div class="col-xl-2 col-sm-3 px-2">
+                                        <div class="item">
+                                            <img src="assets/images/logo/icons8-c-48.png" alt="C#">
+                                            <h3>C#</h3>
+                                            <!-- <span class="year">1-3 years</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 px-2">
+                                        <div class="item">
+                                            <img src="assets/images/logo/icons8-c++-48.png" alt="C++">
+                                            <h3>C++</h3>
+                                            <!-- <span class="year">over 5 years</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 px-2">
+                                        <div class="item">
+                                            <img src="assets/images/logo/icons8-java-48.png" alt="Java">
+                                            <h3>Java</h3>
+                                            <!-- <span class="year">4 years</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 px-2">
+                                        <div class="item">
+                                            <img src="assets/images/logo/icons8-python-48.png" alt="Python">
+                                            <h3>Python</h3>
+                                            <!-- <span class="year">about 3 years</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 px-2">
+                                        <div class="item">
+                                            <img src="assets/images/logo/icons8-unity-48.png" alt="Unity">
+                                            <h3>Unity</h3>
+                                            <!-- <span class="year">3 years</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 px-2">
+                                        <div class="item">
+                                            <img src="assets/images/logo/icons8-unreal-engine-48.png" alt="Unreal Engine">
+                                            <h3>Unreal Engine</h3>
+                                            <!-- <span class="year">about 2 years</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 px-2">
+                                        <div class="item">
+                                            <img src="assets/images/logo/maya logo.png" alt="Maya" style="width: 48px; height: 48px;">
+                                            <h3>Maya</h3>
+                                            <!-- <span class="year">about 2 years</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 px-2">
+                                        <div class="item">
+                                            <img src="assets/images/logo/icons8-.net-framework-48.png" alt=".NET">
+                                            <h3>.Net</h3>
+                                            <!-- <span class="year">about 2 years</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 px-2">
+                                        <div class="item">
+                                            <img src="assets/images/logo/icons8-angular-48.png" alt="Angular">
+                                            <h3>Angular</h3>
+                                            <!-- <span class="year">about 2 years</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 px-2">
+                                        <div class="item">
+                                            <img src="assets/images/logo/icons8-microsoft-sql-server-48.png" alt="MS SQL">
+                                            <h3>MS SQL</h3>
+                                            <!-- <span class="year">about 2 years</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 px-2">
+                                        <div class="item">
+                                            <img src="assets/images/logo/icons8-docker-48.png" alt="Docker">
+                                            <h3>Docker</h3>
+                                            <!-- <span class="year">about 2 years</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-3 px-2">
+                                        <div class="item">
+                                            <img src="assets/images/logo/icons8-css-48.png" alt="CSS">
+                                            <h3>CSS</h3>
+                                            <!-- <span class="year">about 2 years</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+         <!-- ======================================Edu & Exp======================================== -->
+                    <div class="row">
+                        <div class="col-xl-6 education">
+                            <header class="custom">
+                                <h2>Education</h2>
+                            </header>
+                            <div class="items">
+                                <div class="item last">
+                                    <div class="icon">
+                                        <i class="las la-university"></i>
+                                    </div>
+                                    <div class="box">
+                                        <span class="year">2023 - 2025</span>
+                                        <h2 class="title">MSc in Computing Science</h2>
+                                        <p>Digital Media</p>
+                                        <p><img src="assets/images/logo/SFU_logo.png" alt="SFU Icon" style="width: 25px; height: 20px;"> Simon Fraser University (BC, Canada)</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="icon">
+                                        <i class="las la-university"></i>
+                                    </div>
+                                    <div class="box">
+                                        <span class="year">2014 - 2018</span>
+                                        <h2 class="title">BSc in Computer Science</h2>
+                                        <p><img src="assets/images/logo/UC_logo.png" alt="UCalgary Icon" style= "height: 40px;"> University of Calgary (AB, Canada)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 experience">
+                            <header class="custom">
+                                <h2>Experience</h2>
+                            </header>
+                            <div class="items">
+                                <div class="item last">
+                                    <div class="icon">
+                                        <i class="las la-briefcase"></i>
+                                    </div>
+                                    <div class="box">
+                                        <span class="year"> Sep. 2024 - Dec. 2024</span>
+                                        <h2 class="title"> Assistant Technical Artist Co-Op</h2>
+                                        <span class="company"><img src="assets/images/logo/Electronic-Arts-Logo.png" alt= "Icon" style="width: 25px; height: 25px;"> Electronic Arts Inc. (Burnaby, BC)</span>
+                                        <p>Developed pipeline tools using Python and APIs to automate rigging workflows, improving efficiency by 70%.</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="icon">
+                                        <i class="las la-briefcase"></i>
+                                    </div>
+                                    <div class="box">
+                                        <span class="year"> Mar. 2024 - Sep. 2024</span>
+                                        <h2 class="title">Audio Programmer</h2>
+                                        <span class="company"><img src="assets/images/logo/studioXlabs.png" alt= "Icon" style="width: 18px; height: 25px;"> Studio X Labs (Vancouver, BC) </span>
+                                        <p>Integrated audio system in Unreal Engine 4 using C++, bp, FMOD, and Wwise. Shipped Indie Game <a href="https://store.steampowered.com/app/2592160/Dispatch/">Dispatch</a> on Steam. </p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="icon">
+                                        <i class="las la-briefcase"></i>
+                                    </div>
+                                    <div class="box">
+                                        <span class="year">Jan. 2023 - Jun. 2023 </span>
+                                        <h2 class="title">Junior Game Designer</h2>
+                                        <span class="company"><img src="assets/images/logo/igg_logo.png" alt= "Icon" style="width: 35px; height: 25px;">IGG Canada Inc. (Vancouver, BC)</span>
+                                        <p>Shipped <a href="https://play.google.com/store/apps/details?id=com.whalsealegends.android&pli=1">Whalsea Legends</a> on Google Play, 
+                                           developing the UI system with C# and FGUI in Unity with GDD.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="icon">
+                                        <i class="las la-briefcase"></i>
+                                    </div>
+                                    <div class="box">
+                                        <span class="year"> Apr. 2020 - Aug. 2022 </span>
+                                        <h2 class="title">Indie Game Developer</h2>
+                                        <p>Independently developed Infinite Dawn, handling design, programming, troubleshooting, and art integration in Unity.</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="icon">
+                                        <i class="las la-briefcase"></i>
+                                    </div>
+                                    <div class="box">
+                                        <span class="year"> Apr. 2019 - Oct. 2019  </span>
+                                        <h2 class="title">Data Consultant</h2>
+                                        <span class="company"><img src="assets/images/logo/YYC_logo.jpg" alt= "Icon" style="width: 45px; height: 15px;"> Calgary Airport Authority (Calgary, AB)</span>
+                                        <p>Managed data records, modifications, and updates while enhancing internal system controls.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       <!-- =============================================work================================================ -->
+       <section id="my_work" class="active">
+        <div class="text-center">
+            <header class="has-bg">
+                <img src="assets/images/bg/h1-bg.png" alt="h1 bg">
+                <!-- <img src="assets/images/bg/h1-bg-light.png" alt="h1 bg"> -->
+                <h1>My Work</h1>
+            </header>
+        </div>
+        <div class="filters">
+            <button data-group="all" class="active">
+                <h4>All</h4>
+            </button>
+            <button data-group="Game">
+                <h4>Game</h4>
+            </button>
+            <button data-group="App">
+                <h4>App/Software</h4>
+            </button>
+            <button data-group="3D">
+                <h4>3D</h4>
+            </button>
+        </div>
+        <div class="container">
+            <div class="row work-items justify-content-start">
+                <div class="col-sm-6 col-lg-4 item" data-groups='["App"]'>
+                    <div 
+                    class="wrap"
+                    data-image='[]'
+                    data-video='["https://www.youtube.com/embed/ip0_5cBUwo0"]'
+                    data-title="VR Electric Vehicle Battery Repair Simulator"
+                    data-description="This project was developed for Vancouver Community College (VCC) as a precision training VR solution to assist automotive students in practicing their coursework.
+                    As the lead developer, I collaborated with a UX designer, UI artist, 3D artist, PM, and another developer. My responsibilities included:
+                    - Design and refine the project framework using the Meta XR Toolkit.
+                    - Implement most interactions and battery repair tasks (0:58-6:18).
+                    - Develop an in-game debugging and log export system (6:18-6:33).
+                    - Prototype an Instructor Mode for real-time student monitoring via a synchronized Windows-Oculus view (6:33-end).
+                    Awarded the Gerri Sinclair Award for Innovation in Digital Media from SFU.
+                    "
+                    data-client="Vancouver Community College"
+                    data-completed="August 2 2024"
+                    data-skills="Unity, C#, Git, OOP"+++++++++++++
+                    data-project-link="#"
+                    >
+                    <a href="#" data-toggle="modal" data-target="#workModal">
+                                <img src="assets/images/works/vcc_vr_thumbnail.jpg" alt="work">
+                            </a>
+                            <h3>VR EV Battery Repair Simulator </h3>
+                            <span class="year">2024</span>
+                        </div>
+                    </div>
+
+                <div class="col-sm-6 col-lg-4 item" data-groups='["Game"]'>
+                    <div 
+                        class="wrap"
+                        data-image='[]'
+                        data-video='["https://video.fastly.steamstatic.com/store_trailers/257072977/movie480_vp9.webm?t=1738690472"]'
+                        data-title="Dispatch"
+                        data-description="Dispatch is a superhero workplace comedy where choices matter. As the player, you manage a dysfunctional team of misfit heroes, balancing emergency response, office politics, and personal relationships.
+                                        Adhoc Studio outsourced audio programming and design for Dispatch to Studio X Labs, where I worked as an Audio Programmer, integrating and managing audio assets in Unreal Engine 4 using FMOD and Blue Print. The game is available for pre-release on Steam — See Project Link."
+                        data-client="AdHoc Studio"
+                        data-completed="Sep 2024"
+                        data-skills="Unreal Engine 4, C++, FMOD, Plastic SCM, GEM"+++++++++++++
+                        data-project-link="https://store.steampowered.com/app/2592160/Dispatch/"
+                    >
+                        <a href="#" data-toggle="modal" data-target="#workModal">
+                            <img src="assets/images/works/dispatch_thumbnail.jpg" alt="work">
+                        </a>
+                        <h3>Dispatch (Indie Game)</h3>
+                        <span class="year">2024</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 item" data-groups='["Game"]'>
+                    <div 
+                        class="wrap"
+                        data-image='[]'
+                        data-video='["https://www.youtube.com/embed/6LrAnLse_PA"]'
+                        data-title="Whalsea Legends (Mobile SLG Game)"
+                        data-description="During my time as a Junior Game Designer at IGG Canada Inc, I was responsible for implementing UX/UI design in Unity, ensuring smooth integration and functionality. My key contributions included:
+                        - Translating UX designs into interactive UI elements in Unity.
+                        - Testing, maintaining, and updating the UI system.
+                        - Creating Game Design Documents (GDDs) for Friends, Guild, Leaderboard, and BI systems.
+                        See Google Play page by clicking Project Link.
+                        "
+                        data-client="N/A"
+                        data-completed="June, 2023"
+                        data-skills="C#, Unity, Source Tree, Monday, Figma, MS Excel"+++++++++++++
+                        data-project-link="https://play.google.com/store/apps/details?id=com.whalsealegends.android&pli=1"
+                    >
+                        <a href="#" data-toggle="modal" data-target="#workModal">
+                            <img src="assets/images/works/whalsea_thumbnail.jpg" alt="work">
+                        </a>
+                        <h3>Whalsea Legends (Mobile SLG Game)</h3>
+                        <span class="year">2023</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 item" data-groups='["App"]'>
+                    <div 
+                        class="wrap"
+                        data-image='[]'
+                        data-video='["https://www.youtube.com/embed/awuieItgNjo"]'
+                        data-title="Mastro the Piano Learning MR Platform"
+                        data-description="As the XR Developer, I collaborated with a UX designer, UI artist, game designer, and PM to create a Mixed Reality (MR) piano learning platform. Over five weeks, from ideation to delivery, we built an immersive, gamified experience with personalized learning paths for busy professionals."
+                        data-client="Centre for Digital Media"
+                        data-completed="December 01 2023"
+                        data-skills="C#, Unity, Git, MIDI Music files"+++++++++++++
+                        data-project-link="#"
+                    >
+                        <a href="#" data-toggle="modal" data-target="#workModal">
+                            <img src="assets/images/works/piano_mr_thumbnail.jpg" alt="work">
+                        </a>
+                        <h3>Mastro the Piano Learning MR Platform</h3>
+                        <span class="year">2023</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 item" data-groups='["App"]'>
+                    <div 
+                        class="wrap"
+                        data-image='[]'
+                        data-video='["https://www.youtube.com/embed/S68GL2sl60Y?si=jHw8SWCWupGbCX1-"]'
+                        data-title="Rhythim1x - The Musical Therapy App"
+                        data-description="A quick prototype developed in 3 days using C# and Visual Studio. Collaborated closely with the UX/UI designer and PM. Applied Agile methodology, conducted user testing, analyzed data, and iterated on the design."
+                        data-client="Centre for Digital Media"
+                        data-completed="Oct 2023"
+                        data-skills="C#, Visual Studio, GitLab, Figma, Agile Development"+++++++++++++
+                        data-project-link="https://store.steampowered.com/app/2592160/Dispatch/"
+                    >
+                        <a href="#" data-toggle="modal" data-target="#workModal">
+                            <img src="assets/images/works/music_theraphy_thumbnail.jpg" alt="work">
+                        </a>
+                        <h3>Rhythim1x - The Musical Therapy App</h3>
+                        <span class="year">2023</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 item" data-groups='["Game"]'>
+                    <div 
+                        class="wrap"
+                        data-image='[]'
+                        data-video='["https://www.youtube.com/embed/BX0B0wTlE-c"]'
+                        data-title="Infinite Dawn (Survival & Adventure Game) Demo"
+                        data-description="I independently designed and developed this game, handling game concepts, mechanics, and rules. I structured modules, defined features, and implemented all programming using C# in Unity. Additionally, I created storyboards, managed camera controls, optimized 2D/3D assets, and applied post-processing effects to align visuals with the game's concept."
+                        data-client="N/A"
+                        data-completed="Oct 02 2022"
+                        data-skills="Unity, C#, OOP, Git, System Design"+++++++++++++
+                        data-project-link="#"
+                    >
+                        <a href="#" data-toggle="modal" data-target="#workModal">
+                            <img src="assets/images/works/0.jpg" alt="work">
+                        </a>
+                        <h3>Infinite Dawn (Survival & Adventure Game)</h3>
+                        <span class="year">2022</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 item" data-groups='["Game"]'>
+                    <div 
+                        class="wrap"
+                        data-image='[]'
+                        data-video='["https://www.youtube.com/embed/PEGI_N3S8xM?si=jrO35aiEA_1QB81V"]'
+                        data-title="FPS Shooter Game_Demo"
+                        data-description="This FPS shooter game, built in Unreal Engine 5, is a high-quality AAA project still in development. The game features advanced character movement, responsive shooting mechanics, and immersive animations, supporting both PC and console controllers.
+                        Key Features:
+                        - Character Movement & Animation: Strafing, turn-in-place, aim offsets, inverse kinematics, and dynamic crouching.
+                        - Weapon Systems: Firearms with recoil, reloading, automatic & semi-automatic modes, and realistic visual/audio effects.
+                        - Advanced Animation & IK: Animation Blueprints, blendspaces, per-bone animation blending, and procedural movement.
+                        - Dynamic UI & HUD: Interactive crosshairs reacting to movement and firing, weapon info displays, and item rarity indicators."
+                        data-client="N/A"
+                        data-completed="Oct 2022"
+                        data-skills="Unreal Engine 5, C++, Blueprint, GitHub"+++++++++++++
+                        data-project-link="https://github.com/mzhai-UofC/UE5_Shooter_Game_Code/tree/main/Unreal_Shooter_Game_Project/Source/Shooter"
+                    >
+                        <a href="#" data-toggle="modal" data-target="#workModal">
+                            <img src="assets/images/works/fps_shooter_thumbnail.jpg" alt="work">
+                        </a>
+                        <h3>FPS Shooter Game</h3>
+                        <span class="year">2022</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 item" data-groups='["App"]'>
+                    <div 
+                        class="wrap"
+                        data-image='[]'
+                        data-video='["https://www.youtube.com/embed/e9OaL89z8Js?si=o2qEU-SOWUEFwC6t"]'
+                        data-title="Unity Editor Tool: Custom Tree Generator"
+                        data-description="This tool was developed to generate custom trees in Unity. It uses a procedural generation algorithm to create tree structures based on user-defined parameters. The tool is designed to be user-friendly, allowing users to adjust tree parameters and generate trees in real-time. GitHub code avaliable at project link. "
+                        data-client="N/A"
+                        data-completed="Nov 2022"
+                        data-skills="C#, Git Lab, Percedural Generation, 3D Math"+++++++++++++
+                        data-project-link="https://github.com/mzhai-UofC/Unity_Procedure_Tree_Generator"
+                    >
+                        <a href="#" data-toggle="modal" data-target="#workModal">
+                            <img src="assets/images/works/tree_generator_thumbnail.jpg" alt="work">
+                        </a>
+                        <h3>Custom Tree Generator</h3>
+                        <span class="year">2022</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 item" data-groups='["3D"]'>
+                    <div 
+                        class="wrap"
+                        data-image='["assets/images/works/violet_3D/v_1.jpg", "assets/images/works/violet_3D/v_2.jpg", "assets/images/works/violet_3D/v_3.jpg", "assets/images/works/violet_3D/v_4.jpg", "assets/images/works/violet_3D/v_5.jpg", "assets/images/works/violet_3D/v_6.jpg", "assets/images/works/violet_3D/v_7.jpg", "assets/images/works/violet_3D/v_8.jpg", "assets/images/works/violet_3D/v_9.jpg", "assets/images/works/violet_3D/v_10.jpg","assets/images/works/violet_3D/Violet_29.png", "assets/images/works/violet_3D/v_11.jpg"]'
+                        data-video='[]'
+                        data-title="3D character - Violet Evergarden"
+                        data-description="This 3D character model is based on the 2D color concept design of Violet Evergarden, the protagonist of Violet Evergarden. It was created using DAZ Studio, Maya, ZBrush, Substance Painter, and Marvelous Designer, with final rendering done in Cinema 4D Redshift. "
+                        data-client="N/A"
+                        data-completed="December 2022"
+                        data-skills="DAZ Studio, Maya, ZBrush, Substance Painter, Marvelous Designer, Cinema 4D, Photoshop"+++++++++++++
+                        data-project-link="#"
+                    >
+                        <a href="#" data-toggle="modal" data-target="#workModal">
+                            <img src="assets/images/works/violet_thumbnail.jpg" alt="work">
+                        </a>
+                        <h3>3D character - Violet Evergarden</h3>
+                        <span class="year">2022</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 item" data-groups='["3D"]'>
+                    <div 
+                        class="wrap"
+                        data-image='[]'
+                        data-video='["https://www.youtube.com/embed/joYVEcS7xKM?si=Zs4DCjA4AHIRphS8", "https://www.youtube.com/embed/YUG7AdjycGc?si=oMb-zTsT4SHtBzT5", "https://www.youtube.com/embed/wRG-5IpboVg?si=cpUBvQPsEVvGatn7" , "https://www.youtube.com/embed/Un5T4wjRH-k?si=SoLDKzNXQ9dLaLjL"]'
+                        data-title="3D Environment - Hut"
+                        data-description="This 3D environment model - Hut was created following a YouTube tutorial as a learning exercise. It includes both high-poly and low-poly versions to practice optimization techniques. The modeling was done in Maya, with sculpting in ZBrush, texturing in Substance Painter, and final rendering in Marmoset Toolbag. "
+                        data-client="N/A"
+                        data-completed="Oct 2021"
+                        data-skills="Maya, ZBrush, Substance Painter, Marmoset Toolbag"+++++++++++++
+                        data-project-link="#"
+                    >
+                        <a href="#" data-toggle="modal" data-target="#workModal">
+                            <img src="assets/images/works/hut_thumbnail.jpg" alt="work">
+                        </a>
+                        <h3>3D Environment - Hut</h3>
+                        <span class="year">2021</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- <section id="testimonial">Testimonial</section> -->
+
+        <!-- ===========================================Contact me========================================== -->
+        <section id="contact_me" >
+            <div class="text-center">
+                <header class="has-bg">
+                    <img  src="assets/images/bg/h1-bg.png" alt="h1 bg">
+                    <!-- <img  src="assets/images/bg/h1-bg-light.png" alt="h1 bg"> -->
+                    <h1>Contact Me</h1>
+                </header>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 form">
+                        <form>
+                            <div class="form-item">
+                                <label>Name</label>
+                                <input type="text" name="name">
+                            </div>
+                            <div class="form-item">
+                                <label>Email</label>
+                                <input type="email" name="email">
+                            </div>
+                            <div class="form-item">
+                                <label>Subject</label>
+                                <input type="text" name="subject">
+                            </div>
+                            <div class="form-item">
+                                <label>Message</label>
+                                <textarea name="message"></textarea>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn-custom-dark inner-link">Send </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 info">
+                        <div class="item">
+                            <i class="las la-phone"></i>
+                            <div class="text">
+                                <span class="title">Phone number:</span>
+                                <a href="tel:+15875739370">5875739370</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="las la-envelope"></i>
+                            <div class="text">
+                                <span class="title">Email:</span>
+                                <a href="mailto:Muzhou_Zhai@thecdm.ca">Muzhou_Zhai@thecdm.ca</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="las la-map-marker-alt"></i>
+                            <div class="text">
+                                <span class="title">Location:</span>
+                                <p>Great Northern Way, Vancouver BC.<br> CA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+   <div class="modal fade" id="workModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="modal-close-button" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="las la-times"></i>
+                </button>
+                <!-- <div id="mediaContainer"></div> -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-7 left">
+                            <h2 class="title"></h2>
+                            <p class="description"></p>
+                        </div>
+                        <div class="col-lg-5 right">
+                            <div class="client mb-3">
+                                <i class="las la-user-alt"></i>
+                                <span class="title">Client:</span>
+                                <span class="value"></span>
+                            </div>
+                            <div class="completed mb-3">
+                                <i class="lar la-calendar-check"></i>
+                                <span class="title">Completed:</span>
+                                <span class="value"></span>
+                            </div>
+                            <div class="skills">
+                                <i class="las la-flask"></i>
+                                <span class="title">Skills:</span>
+                                <span class="value"></span>
+                            </div>
+                            <div class="project-link">
+                                <i class="las la-link"></i>
+                                <a href="">Project link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="mediaContainer"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/6.0.0/shuffle.min.js"
+    integrity="sha512-fN+YeX/572qBnWu5Axj90DDyKjSNUfvR+8OaFkz27xnr+QE50vZHefJ+bplRrM284a8cJgMLxEipmKshf8vrug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
