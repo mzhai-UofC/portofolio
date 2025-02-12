@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
+    <title>Portfolio by M.Zhai</title>
+    <link rel="icon" href="assets/images/logo/mz_logo.png">
+    
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -20,7 +22,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#home">
+                    <a href="#home" class = "active inner-link">
                         <i class="las la-home" class="inner-link"></i>
                         <span>Home</span>
                     </a>
@@ -41,7 +43,7 @@
                     <span>My Resume</span>
                 </li>
                 <li>
-                    <a href="#my_work" class="active inner-link">
+                    <a href="#my_work" class="inner-link">
                         <i class="las la-briefcase"></i>
                         <span>My Work</span>
                     </a>
@@ -70,7 +72,7 @@
         </div>
     </div>
     <main>
-        <section id="home">
+        <section id="home" class="active">
             <div class="meteor-shower"></div>
             <div class = "container">
                 <div class = "row">
@@ -81,7 +83,9 @@
                             <h2></h2>
                        </div>
             
-                       <p>I don't define myself by a title—life shouldn't have limits. 
+                       <p>
+                        <!-- I don't define myself by a title—life shouldn't have limits.  -->
+                        I excel at leveraging cross-disciplinary technologies to bring any design to real-life application.<br>
                         I build games, develop software, create apps to solve real-world problems, and draw comics.
                         </p>
                         <a class="btn-custom-blue" href="#my_resume" onclick="setActive('my_resume')">My Resume</a>
@@ -278,7 +282,7 @@
                                         <span class="year"> Mar. 2024 - Sep. 2024</span>
                                         <h2 class="title">Audio Programmer</h2>
                                         <span class="company"><img src="assets/images/logo/studioXlabs.png" alt= "Icon" style="width: 18px; height: 25px;"> Studio X Labs (Vancouver, BC) </span>
-                                        <p>Integrated audio system in Unreal Engine 4 using C++, bp, FMOD, and Wwise. Shipped Indie Game <a href="https://store.steampowered.com/app/2592160/Dispatch/">Dispatch</a> on Steam. </p>
+                                        <p>Integrated audio system in Unreal Engine 4 using C++, bp, FMOD, and Wwise. Shipped Indie Game <a href="https://store.steampowered.com/app/2592160/Dispatch/" target="_blank">Dispatch</a> on Steam. </p>
                                     </div>
                                 </div>
                                 <div class="item">
@@ -289,7 +293,7 @@
                                         <span class="year">Jan. 2023 - Jun. 2023 </span>
                                         <h2 class="title">Junior Game Designer</h2>
                                         <span class="company"><img src="assets/images/logo/igg_logo.png" alt= "Icon" style="width: 35px; height: 25px;">IGG Canada Inc. (Vancouver, BC)</span>
-                                        <p>Shipped <a href="https://play.google.com/store/apps/details?id=com.whalsealegends.android&pli=1">Whalsea Legends</a> on Google Play, 
+                                        <p>Shipped <a href="https://play.google.com/store/apps/details?id=com.whalsealegends.android&pli=1" target="_blank">Whalsea Legends</a> on Google Play, 
                                            developing the UI system with C# and FGUI in Unity with GDD.
                                         </p>
                                     </div>
@@ -322,7 +326,7 @@
             </div>
         </section>
        <!-- =============================================work================================================ -->
-       <section id="my_work" class="active">
+       <section id="my_work" >
         <div class="text-center">
             <header class="has-bg">
                 <img src="assets/images/bg/h1-bg.png" alt="h1 bg">
