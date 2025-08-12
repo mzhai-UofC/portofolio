@@ -81,30 +81,107 @@ const workElements = document.querySelectorAll("#my_work .work-items .wrap");
 
 workElements.forEach((item) => {
     item.addEventListener('click', function () {
-        const videos = JSON.parse(item.getAttribute('data-video'));
-        const images = JSON.parse(item.getAttribute('data-image'));
+        const videos = JSON.parse(item.getAttribute('data-video') || '[]');
+        const images = JSON.parse(item.getAttribute('data-image') || '[]');
+        const media = JSON.parse(item.getAttribute('data-media') || '[]');
         const mediaContainer = document.getElementById('mediaContainer');
 
         mediaContainer.innerHTML = '';
 
-        videos.forEach((video) => {
-            const iframeElement = document.createElement('iframe');
-            iframeElement.src = video;
-            iframeElement.style.width = '100%';
-            iframeElement.style.height = "480px";
-            iframeElement.frameBorder = '0';
-            iframeElement.allowFullscreen = true;
-            iframeElement.classList.add('mb-3');
-            mediaContainer.appendChild(iframeElement);
-        });
+        // Function to determine media type and create appropriate element
+        function createMediaElement(mediaItem) {
+            const mediaType = getMediaType(mediaItem);
+            
+            if (mediaType === 'video-youtube' || mediaType === 'video-external') {
+                const iframeElement = document.createElement('iframe');
+                iframeElement.src = mediaItem;
+                iframeElement.style.width = '100%';
+                iframeElement.style.height = "600px"; // Increased height for better viewing
+                iframeElement.frameBorder = '0';
+                iframeElement.allowFullscreen = true;
+                iframeElement.classList.add('mb-3');
+                return iframeElement;
+            } else if (mediaType === 'video-local') {
+                const videoElement = document.createElement('video');
+                videoElement.src = mediaItem;
+                videoElement.style.width = '100%';
+                videoElement.style.height = "600px"; // Increased height for better viewing
+                videoElement.controls = true;
+                videoElement.autoplay = false;
+                videoElement.muted = true;
+                videoElement.preload = 'metadata';
+                videoElement.playsInline = true;
+                videoElement.classList.add('mb-3');
+                
+                videoElement.addEventListener('error', function(e) {
+                    console.error('Video loading error:', e);
+                    const errorMsg = document.createElement('div');
+                    errorMsg.innerHTML = `<p style="color: red; padding: 20px; text-align: center;">Video cannot be loaded. Please check the file format or try a different browser.</p>`;
+                    videoElement.parentNode.replaceChild(errorMsg, videoElement);
+                });
+                
+                videoElement.addEventListener('loadedmetadata', function() {
+                    console.log('Video metadata loaded successfully');
+                });
+                
+                return videoElement;
+            } else if (mediaType === 'image') {
+                const imgElement = document.createElement('img');
+                imgElement.src = mediaItem;
+                imgElement.classList.add('d-block', 'mb-3');
+                
+                // Check if it's a GIF file - display at original size
+                if (mediaItem.toLowerCase().includes('.gif')) {
+                    imgElement.classList.add('gif-original-size');
+                } else {
+                    // For regular images, use full width
+                    imgElement.classList.add('w-100');
+                    imgElement.style.height = 'auto';
+                }
+                
+                return imgElement;
+            }
+        }
 
-        images.forEach((image) => {
-            const imgElement = document.createElement('img');
-            imgElement.src = image;
-            imgElement.classList.add('d-block', 'w-100', 'mb-3');
-            imgElement.style.height = 'auto';
-            mediaContainer.appendChild(imgElement);
-        });
+        // Function to determine media type based on URL/path
+        function getMediaType(mediaItem) {
+            if (mediaItem.includes('youtube') || mediaItem.includes('youtu.be')) {
+                return 'video-youtube';
+            } else if (mediaItem.includes('http') && (mediaItem.includes('.webm') || mediaItem.includes('.mp4') || mediaItem.includes('video'))) {
+                return 'video-external';
+            } else if (mediaItem.includes('.mp4') || mediaItem.includes('.webm') || mediaItem.includes('.ogg')) {
+                return 'video-local';
+            } else if (mediaItem.includes('.jpg') || mediaItem.includes('.jpeg') || mediaItem.includes('.png') || mediaItem.includes('.gif') || mediaItem.includes('.webp')) {
+                return 'image';
+            }
+            // Default to image if uncertain
+            return 'image';
+        }
+
+        // If using new data-media attribute (mixed media)
+        if (media.length > 0) {
+            media.forEach((mediaItem) => {
+                const element = createMediaElement(mediaItem);
+                if (element) {
+                    mediaContainer.appendChild(element);
+                }
+            });
+        } else {
+            // Fallback to old system for backwards compatibility
+            videos.forEach((video) => {
+                const element = createMediaElement(video);
+                if (element) {
+                    mediaContainer.appendChild(element);
+                }
+            });
+
+            images.forEach((image) => {
+                const element = createMediaElement(image);
+                if (element) {
+                    mediaContainer.appendChild(element);
+                }
+            });
+        }
 
         document.querySelector('#workModal .modal-body .title').innerText = item.getAttribute('data-title');
         document.querySelector('#workModal .modal-body .description').innerText = item.getAttribute('data-description');
