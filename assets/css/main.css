@@ -1009,14 +1009,15 @@ main > section header.custom h2 {
     padding-right: 12px;
     padding-left: 12px;
   }
+  
+  /* 手机模式下技能项样式优化 - 移除固定宽度，让Bootstrap控制 */
   #my_resume .web-skills .items {
     margin-left: 0;
     margin-right: 0;
   }
   #my_resume .web-skills .items .item {
-    width: calc(50% - 8px);
-    margin: 0 4px 16px 4px;
-    padding: 20px 8px;
+    padding: 24px 12px;
+    margin-bottom: 12px;
   }
   .modal#workModal .modal-dialog .modal-content .modal-body img {
     height: unset;
