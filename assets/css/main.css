@@ -789,6 +789,18 @@ main > section header.custom h2 {
      object-fit: cover;
   border-radius: 8px;
 }
+
+/* GIF文件保持原始宽度显示 */
+.modal#workModal .modal-dialog .modal-content .modal-body .gif-original-size {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100%;
+  -o-object-fit: unset !important;
+     object-fit: unset !important;
+  display: block;
+  margin: 0 auto;
+}
+
 .modal#workModal .modal-dialog .modal-content .modal-body .left {
   padding-left: 0;
   padding-right: 32px;
@@ -1022,6 +1034,16 @@ main > section header.custom h2 {
   .modal#workModal .modal-dialog .modal-content .modal-body img {
     height: unset;
   }
+  
+  /* GIF文件保持原始宽度显示 */
+  .modal#workModal .modal-dialog .modal-content .modal-body .gif-original-size {
+    width: auto !important;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
   .modal#workModal .modal-dialog .modal-content .modal-body .left {
     padding-right: 0;
   }
