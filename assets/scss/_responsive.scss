@@ -127,6 +127,20 @@
             padding-right: 12px;
             padding-left: 12px;
         }
+
+        // 技能部分 - 手机模式下一行两个
+        .web-skills {
+            .items {
+                margin-left: 0;
+                margin-right: 0;
+
+                .item {
+                    width: calc(50% - 8px);
+                    margin: 0 4px 16px 4px;
+                    padding: 20px 8px;
+                }
+            }
+        }
     }
 
     .modal#workModal {
