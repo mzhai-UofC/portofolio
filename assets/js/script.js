@@ -53,28 +53,34 @@ for(let i = 1; i <= 15; i++) {
     document.querySelector('#home .meteor-shower').append(meteor);
 }
 
-
-const shuffleInstance = new Shuffle(document.querySelector('#my_work .work-items'), {
-    itemSelector: '.item'
+// 更酷的筛选动画：scale+opacity
+var filterButtons = document.querySelectorAll('.filters button');
+var workItems = document.querySelectorAll('.work-items .item');
+filterButtons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        filterButtons.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var group = btn.getAttribute('data-group');
+        workItems.forEach(function(item) {
+            var groups = item.getAttribute('data-groups');
+            var show = (group === 'all') || (groups && groups.toLowerCase().includes(group.toLowerCase()));
+            if (show) {
+                item.classList.remove('hide');
+                item.classList.add('show');
+                item.style.display = '';
+                setTimeout(function() {
+                    item.classList.remove('show');
+                }, 350);
+            } else {
+                item.classList.remove('show');
+                item.classList.add('hide');
+                setTimeout(function() {
+                    item.style.display = 'none';
+                }, 350);
+            }
+        });
+    });
 });
-
-const filterButtons = document.querySelectorAll('#my_work .filters button')
-
-filterButtons.forEach((item) => {
-    item.addEventListener('click', workFilter)
-})
-
-
-function workFilter() {
-    const clickedButton = event.currentTarget;
-    const clickedButtonGroup = clickedButton.getAttribute('data-group');
-    const activeButton = document.querySelector('#my_work .filters button.active');
-
-    activeButton.classList.remove('active');
-    clickedButton.classList.add("active");
-
-    shuffleInstance.filter(clickedButtonGroup);
-}
 
 var workModal = new bootstrap.Modal(document.getElementById('workModal'));
 const workElements = document.querySelectorAll("#my_work .work-items .wrap");
