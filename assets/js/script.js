@@ -97,12 +97,18 @@ workElements.forEach((item) => {
         // Function to determine media type and create appropriate element
         function createMediaElement(mediaItem) {
             const mediaType = getMediaType(mediaItem);
-            
+            // 获取 workModal 内容区域宽高
+            const modalBody = document.querySelector('#workModal .modal-body');
+            let modalHeight = modalBody ? modalBody.offsetHeight : window.innerHeight * 0.8;
+            // 如果内容区域高度太小，使用窗口高度的 80%
+            if (!modalBody || modalHeight < 400) {
+                modalHeight = window.innerHeight * 0.8;
+            }
             if (mediaType === 'video-youtube' || mediaType === 'video-external') {
                 const iframeElement = document.createElement('iframe');
                 iframeElement.src = mediaItem;
                 iframeElement.style.width = '100%';
-                iframeElement.style.height = "600px"; // Increased height for better viewing
+                iframeElement.style.height = modalHeight + 'px';
                 iframeElement.frameBorder = '0';
                 iframeElement.allowFullscreen = true;
                 iframeElement.classList.add('mb-3');
@@ -111,7 +117,7 @@ workElements.forEach((item) => {
                 const videoElement = document.createElement('video');
                 videoElement.src = mediaItem;
                 videoElement.style.width = '100%';
-                videoElement.style.height = "600px"; // Increased height for better viewing
+                videoElement.style.height = modalHeight + 'px';
                 videoElement.controls = true;
                 videoElement.autoplay = false;
                 videoElement.muted = true;

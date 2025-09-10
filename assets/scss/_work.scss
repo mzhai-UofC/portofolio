@@ -111,7 +111,7 @@
 .modal#workModal {
     .modal-dialog {
         // max-width: 863px;
-        max-width: 75vw;
+        max-width: 80vw;
 
         .modal-content {
             background: $secondary;
@@ -144,6 +144,28 @@
                     height: 532px;
                     object-fit: cover;
                     border-radius: 8px;
+                }
+
+                // GIF图片原始尺寸显示，不超过弹窗宽度
+                img[src$=".gif"] {
+                    display: block;
+                    max-width: 100%;
+                    width: auto;
+                    height: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    border-radius: 8px;
+                }
+                // 视频自适应弹窗宽度和高度，保持比例
+                video {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    max-width: 100%;
+                    max-height: 70vh;
+                    border-radius: 8px;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
 
                 .left {
