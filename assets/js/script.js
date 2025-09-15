@@ -248,3 +248,34 @@ function toggleMode() {
 
     document.querySelector('html').setAttribute("theme", theme)
 }
+
+// 自动弹窗功能：根据 hash 打开指定作品弹窗
+window.addEventListener('load', function() {
+    const hash = window.location.hash;
+    if (hash.startsWith('#my_work#')) {
+        // 切换到 my_work 区域
+        document.querySelector('nav ul li a.active').classList.remove('active');
+        document.querySelector('nav ul li a[href="#my_work"]').classList.add('active');
+        document.querySelector('main > section.active').classList.remove('active');
+        document.getElementById('my_work').classList.add('active');
+        // 作品标识
+        let targetKey = hash.replace('#my_work#', '').toLowerCase();
+        let selector = null;
+        if (targetKey === 'fatbun') {
+            selector = '[data-title*="Fatbuniverse Comics E-Commerce Platform"]';
+        } else if (targetKey === 'vrev') {
+            selector = '[data-title*="VR Electric Vehicle Battery Repair Simulator"]';
+        } else if (targetKey === 'infinitedawn') {
+            selector = '[data-title*="Infinite Dawn"]';
+        }
+        if (selector) {
+            const targetItem = document.querySelector('#my_work .work-items .wrap' + selector);
+            if (targetItem) {
+                // 触发点击事件，弹出弹窗
+                setTimeout(function() {
+                    targetItem.click();
+                }, 500);
+            }
+        }
+    }
+});
